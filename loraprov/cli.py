@@ -93,6 +93,18 @@ def verify_cmd(
         raise typer.Exit(code=1)
 
 
+@app.command("sbom")
+def sbom_cmd(
+    adapter: Path = typer.Argument(..., exists=True, readable=True),
+    out: Path = typer.Option("sbom.json", "--out"),
+):
+    """Export CycloneDX SBOM for adapter."""
+    from .sbom import export_cyclonedx
+
+    export_cyclonedx(adapter, out)
+    console.print(f"[green]✔[/] SBOM written to [cyan]{out}[/]")
+
+
 # ---------- main ---------- #
 def _main():
     app()
