@@ -21,6 +21,7 @@ Verify:
 
 from __future__ import annotations
 
+from importlib import metadata
 from pathlib import Path
 
 import typer
@@ -34,6 +35,29 @@ app = typer.Typer(add_completion=False, help="LoRA / adapter provenance toolkit"
 console = Console()
 
 km = KeyManager()  # singleton for this process
+
+
+# ---------- global --version flag ---------- #
+@app.callback(invoke_without_command=True)
+def main(
+    ctx: typer.Context,
+    version: bool = typer.Option(
+        None,
+        "--version",
+        "-V",
+        help="Show loraprov version and exit",
+        is_eager=True,
+    ),
+):
+    """Top‑level callback to add a --version flag."""
+    if version:
+        console.print(metadata.version("loraprov"))
+        raise typer.Exit()
+
+    # If no sub‑command was given, show help.
+    if ctx.invoked_subcommand is None:
+        console.print(ctx.get_help())
+        raise typer.Exit()
 
 
 # ---------- key sub‑commands ---------- #
@@ -93,6 +117,7 @@ def verify_cmd(
         raise typer.Exit(code=1)
 
 
+# ---------- sbom ---------- #
 @app.command("sbom")
 def sbom_cmd(
     adapter: Path = typer.Argument(..., exists=True, readable=True),
@@ -105,7 +130,7 @@ def sbom_cmd(
     console.print(f"[green]✔[/] SBOM written to [cyan]{out}[/]")
 
 
-# ---------- main ---------- #
+# ---------- executable entry ---------- #
 def _main():
     app()
 

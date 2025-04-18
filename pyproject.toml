@@ -2,7 +2,7 @@
 # =========================================
 [tool.poetry]
 name = "loraprov"
-version = "0.1.1"
+version = "0.1.2"
 description = "Tamper‑evident signatures and license lineage for LoRA / adapter files"
 authors = ["Keith Tyser <keithtyser@gmail.com>"]
 license = "Apache-2.0"
