@@ -31,6 +31,8 @@ Need compliance docs? `loraprov sbom adapter.safetensors` exports a **CycloneDX
 
 ## Architecture
 
+<div style="padding-right:60px">
+
 ```mermaid
 flowchart LR
     A[Developer] --> B["loraprov sign"]
