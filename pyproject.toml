@@ -8,7 +8,6 @@ authors = ["Keith Tyser <keithtyser@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
 packages = [{ include = "loraprov" }]
-python = "^3.9"
 
 [tool.poetry.dependencies]
 python = "^3.9"
