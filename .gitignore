@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+# Env
+.venv/
+# Poetry
+poetry.lock
+# IDE
+.vscode/
+.idea/
