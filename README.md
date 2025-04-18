@@ -22,10 +22,10 @@ loraprov sign adapter.safetensors --parent-sha 6efa... --license MIT --key alice
 
 # verify before deploying
 loraprov verify adapter.safetensors
+```
 
 *Tip&nbsp;→* to protect Hugging Face pushes, enable the [pre‑upload filter](docs/hf_filter.md).  
 Need compliance docs? `loraprov sbom adapter.safetensors` exports a **CycloneDX SBOM** instantly.
-```
 
 ---
 
