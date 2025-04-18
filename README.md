@@ -33,12 +33,12 @@ Need compliance docs? `loraprov sbom adapter.safetensors` exports a **CycloneDX
 
 ```mermaid
 flowchart LR
-    A[Developer] --> B[loraprov sign]
-    B --> C[Signed Adapter]
-    C --> D[loraprov verify<br/>(CI / Prod)]
-    B --> E[HF filter]
+    A[Developer] --> B["loraprov sign"]
+    B --> C["Signed Adapter"]
+    C --> D["loraprov verify<br/>(CI / Prod)"]
+    B --> E["HF filter"]
     E --> C
-    C --> F[SBOM export]
+    C --> F["SBOM export"]
 ```
 
 ---
