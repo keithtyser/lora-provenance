@@ -3,6 +3,7 @@
 [![CI](https://github.com/KeithTyser/lora-provenance/actions/workflows/ci.yml/badge.svg)](https://github.com/KeithTyser/lora-provenance/actions/workflows/ci.yml)  
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)  
 ![Python versions](https://img.shields.io/pypi/pyversions/loraprov)
+📚 **Docs:** <https://keithtyser.github.io/lora-provenance>
 
 Tamper‑evident **signatures** and **license lineage** for any LoRA / adapter file.
 
@@ -30,8 +31,6 @@ Need compliance docs? `loraprov sbom adapter.safetensors` exports a **CycloneDX
 ---
 
 ## Architecture
-
-<div style="padding-right:120px">
 
 ```mermaid
 flowchart LR
