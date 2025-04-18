@@ -1,0 +1,18 @@
+site_name: LoRA-Provenance
+repo_url: https://github.com/keithtyser/lora-provenance
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.instant
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["."]
+
+nav:
+  - Home: index.md
+  - CLI reference: cli_reference.md
+  - HF push filter: hf_filter.md
