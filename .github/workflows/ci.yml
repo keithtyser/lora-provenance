@@ -28,7 +28,7 @@ jobs:
           poetry install --no-interaction
       - name: Run ruff lint
         run: |
-          poetry run ruff .
+          poetry run ruff check .
       - name: Run tests
         run: |
           poetry run pytest -q
