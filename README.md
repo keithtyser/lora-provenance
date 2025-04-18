@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/KeithTyser/lora-provenance/actions/workflows/ci.yml/badge.svg)](https://github.com/KeithTyser/lora-provenance/actions/workflows/ci.yml)  
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)  
-![PyPI](https://img.shields.io/pypi/v/loraprov)
+![PyPI](https://img.shields.io/pypi/v/loraprov)<br>
 [![Signed by loraprov](https://raw.githubusercontent.com/KeithTyser/lora-provenance/main/docs/signed-by-loraprov.svg)](https://github.com/KeithTyser/lora-provenance)<br>
 📚 **Docs:** <https://keithtyser.github.io/lora-provenance>
 
